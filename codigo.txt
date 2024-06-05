@@ -1,0 +1,15 @@
+<div className="search-box">
+        <input type="text" placeholder="Digite a localização" value={location} onChange={handleChangeLocation} />
+        <button onClick={handleSearch}>Buscar Clima</button>
+      </div>
+      {weatherData && (
+        <div className="weather-data">
+          <h2>Dados do Clima</h2>
+          <p>Localização: {weatherData.name}</p>
+          <p>Clima: {weatherData.main.temp}°C</p>
+          <p>Vento: {weatherData.wind.speed} m/s</p>
+          <p>Umidade: {weatherData.main.humidity}%</p>
+          <p>Pressão: {weatherData.main.pressure} hPa</p>
+          <p>Pressão: {weatherData.main.feels_like}</p>
+        </div>
+      )}
